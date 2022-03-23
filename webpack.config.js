@@ -28,6 +28,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
+    open: true,
   },
   devtool: process.env.NODE_ENV === 'development' ? 'eval-source-map' : false,
   module: {
