@@ -2,9 +2,10 @@ const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const mode = process.env.NODE_ENV || 'development';
 
 module.exports = {
-  mode: 'development',
+  mode,
   entry: path.resolve(__dirname, './src/index'),
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -12,7 +13,6 @@ module.exports = {
     clean: true,
   },
   devServer: {
-    overlay: true,
     open: true,
     hot: true,
     historyApiFallback: true,
@@ -40,10 +40,6 @@ module.exports = {
       {
         test: /\.(png|jp(e)g|gif|svg|ico)$/,
         type: 'asset/resource',
-        options: {
-          name: "[name].[ext]?[hash]",
-          limit: 10000
-        }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
