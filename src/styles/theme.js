@@ -5,7 +5,7 @@ export const size = {
 };
 
 const theme = {
-  mainColor: '#0000ff',
+  mainColor: '#088F8F',
   mq: {
     laptop: `@media only screen and (min-width: ${size.largest})`,
     tablet: `@media only screen and (min-width: ${size.large})`,
