@@ -1,23 +1,11 @@
-// {
-//   "compilerOptions": {
-//     "target": "es5",
-//     "lib": ["dom", "dom.Iterable", "esnext"],
-//     "strict": true, //strict 관련, noimplicit 어쩌구 관련 모드 전부 켜기
-//     "noImplicitAny": true, //any타입 금지 여부
-//     "strictNullChecks": true, //null, undefined 타입에 이상한 짓 할시 에러내기
-//     "strictFunctionTypes": true, //함수파라미터 타입체크 강하게
-// },
-
-//   "include": ["src"]
-// }
 {
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
     "lib": ["dom", "dom.Iterable", "esnext"],
+
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
