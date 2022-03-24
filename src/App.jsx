@@ -1,7 +1,20 @@
-import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from '@emotion/react';
 
-const App = () => {
-  return <div>App입니다.</div>;
-};
+import Router from './Router';
+import { theme, GlobalStyle } from '@styles';
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Router />
+        </ThemeProvider>
+      </BrowserRouter>
+    </>
+  );
+}
 
 export default App;
