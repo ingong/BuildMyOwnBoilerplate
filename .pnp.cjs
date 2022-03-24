@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.17.8"],\
             ["@babel/preset-env", "virtual:c497fb9616b3acb524ac0ccbbb1f910c0db99a973c6379114fb7469c77bf3a2954dcf6d1c48ccc12a790b966c952694499e004303fdb0e6fdd5711e42e7b7990#npm:7.16.11"],\
             ["@babel/preset-react", "virtual:c497fb9616b3acb524ac0ccbbb1f910c0db99a973c6379114fb7469c77bf3a2954dcf6d1c48ccc12a790b966c952694499e004303fdb0e6fdd5711e42e7b7990#npm:7.16.7"],\
+            ["@babel/preset-typescript", "virtual:c497fb9616b3acb524ac0ccbbb1f910c0db99a973c6379114fb7469c77bf3a2954dcf6d1c48ccc12a790b966c952694499e004303fdb0e6fdd5711e42e7b7990#npm:7.16.7"],\
             ["@emotion/babel-plugin", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:11.7.2"],\
             ["@emotion/core", "npm:11.0.0"],\
             ["@emotion/react", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:11.8.2"],\
@@ -9783,6 +9784,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.17.8"],\
             ["@babel/preset-env", "virtual:c497fb9616b3acb524ac0ccbbb1f910c0db99a973c6379114fb7469c77bf3a2954dcf6d1c48ccc12a790b966c952694499e004303fdb0e6fdd5711e42e7b7990#npm:7.16.11"],\
             ["@babel/preset-react", "virtual:c497fb9616b3acb524ac0ccbbb1f910c0db99a973c6379114fb7469c77bf3a2954dcf6d1c48ccc12a790b966c952694499e004303fdb0e6fdd5711e42e7b7990#npm:7.16.7"],\
+            ["@babel/preset-typescript", "virtual:c497fb9616b3acb524ac0ccbbb1f910c0db99a973c6379114fb7469c77bf3a2954dcf6d1c48ccc12a790b966c952694499e004303fdb0e6fdd5711e42e7b7990#npm:7.16.7"],\
             ["@emotion/babel-plugin", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:11.7.2"],\
             ["@emotion/core", "npm:11.0.0"],\
             ["@emotion/react", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:11.8.2"],\

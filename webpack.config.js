@@ -18,7 +18,7 @@ module.exports = {
     historyApiFallback: true,
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   devtool: process.env.NODE_ENV === 'development' ? 'eval-source-map' : false,
   module: {
