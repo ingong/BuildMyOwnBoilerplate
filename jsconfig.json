@@ -6,6 +6,7 @@
       "@api": ["./src/api/*"],
       "@components/*": ["./src/components/*"],
       "@constants": ["./src/constants/index.js"],
+      "@contexts/*": ["./src/contexts/*"],
       "@helpers/*": ["./src/helpers/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@styles/*": ["./src/styles/*"],

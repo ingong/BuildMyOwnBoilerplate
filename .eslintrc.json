@@ -17,6 +17,7 @@
     "prettier/prettier": "error",
     "no-undef": "off",
     "no-unused-vars": "warn",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off"
   }
 }
