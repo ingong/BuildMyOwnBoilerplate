@@ -1,0 +1,56 @@
+// {
+//   "compilerOptions": {
+//     "target": "es5",
+//     "lib": ["dom", "dom.Iterable", "esnext"],
+//     "strict": true, //strict 관련, noimplicit 어쩌구 관련 모드 전부 켜기
+//     "noImplicitAny": true, //any타입 금지 여부
+//     "strictNullChecks": true, //null, undefined 타입에 이상한 짓 할시 에러내기
+//     "strictFunctionTypes": true, //함수파라미터 타입체크 강하게
+// },
+
+//   "include": ["src"]
+// }
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["dom", "dom.Iterable", "esnext"],
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+
+    "moduleResolution": "node",
+    "allowJs": true, // js 파일들 ts에서 import해서 쓸 수 있는지
+    "checkJs": true, // 일반 js 파일에서도 에러체크 여부
+    "jsx": "preserve", // tsx 파일을 jsx로 어떻게 컴파일할 것인지 'preserve', 'react-native', 'react'
+    "declaration": true, //컴파일시 .d.ts 파일도 자동으로 함께생성 (현재쓰는 모든 타입이 정의된 파일)
+
+    "strict": true, //strict 관련, noimplicit 어쩌구 관련 모드 전부 켜기
+    "noImplicitAny": true, //any타입 금지 여부
+    "strictNullChecks": true, //null, undefined 타입에 이상한 짓 할시 에러내기
+    "strictFunctionTypes": true, //함수파라미터 타입체크 강하게
+
+    "noUnusedLocals": true, //쓰지않는 지역변수 있으면 에러내기
+    "noUnusedParameters": true, //쓰지않는 파라미터 있으면 에러내기
+    "noImplicitReturns": true, //함수에서 return 빼먹으면 에러내기
+    "noFallthroughCasesInSwitch": true, //switch문 이상하면 에러내기
+
+    "baseUrl": ".",
+    "paths": {
+      "@api": ["./src/api/*"],
+      "@components/*": ["./src/components/*"],
+      "@constants": ["./src/constants/index.js"],
+      "@contexts/*": ["./src/contexts/*"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@utils": ["./src/utils/index.js"]
+    }
+  },
+
+  "include": ["src"]
+}
