@@ -1,25 +1,43 @@
 {
-  "parser": "@typescript-eslint/parser",
+  "root": true,
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 13,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    },
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    }
+  },
+  "ignorePatterns": ["build/", ".pnp.cjs", ".yarn/"],
   "extends": [
     "eslint:recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended"
   ],
-  "parserOptions": {
-    "ecmaVersion": 13,
-    "sourceType": "module"
-  },
   "rules": {
     "prettier/prettier": "error",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "no-undef": "off",
     "no-unused-vars": "warn",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off"
-  },
-  "ignorePatterns": ["build/", ".pnp.cjs", ".yarn/"]
+  }
 }
