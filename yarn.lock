@@ -5599,6 +5599,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mini-css-extract-plugin@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "mini-css-extract-plugin@npm:2.6.0"
+  dependencies:
+    schema-utils: ^4.0.0
+  peerDependencies:
+    webpack: ^5.0.0
+  checksum: ea73bd66558de7a37db094fe68fa130e7a725ab15f880ff8467a75d9c4c2f1576d20720088ea22af9922a94b8600bbfef0c6acaf10d12a32a9bd20a90ba3c35f
+  languageName: node
+  linkType: hard
+
 "minimalistic-assert@npm:^1.0.0":
   version: 1.0.1
   resolution: "minimalistic-assert@npm:1.0.1"
@@ -7326,7 +7337,9 @@ __metadata:
     eslint-plugin-react: ^7.29.4
     eslint-plugin-react-hooks: ^4.3.0
     html-webpack-plugin: ^5.5.0
+    mini-css-extract-plugin: ^2.6.0
     prettier: ^2.6.0
+    prop-types: ^15.8.1
     react: ^17.0.2
     react-dom: ^17.0.2
     react-router-dom: ^6.2.2

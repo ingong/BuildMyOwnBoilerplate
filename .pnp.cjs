@@ -47,6 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:7.29.4"],\
             ["eslint-plugin-react-hooks", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:4.3.0"],\
             ["html-webpack-plugin", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:5.5.0"],\
+            ["mini-css-extract-plugin", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:2.6.0"],\
             ["prettier", "npm:2.6.0"],\
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:17.0.2"],\
@@ -7574,6 +7575,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["mini-css-extract-plugin", [\
+        ["npm:2.6.0", {\
+          "packageLocation": "./.yarn/cache/mini-css-extract-plugin-npm-2.6.0-c3e21a6a16-ea73bd6655.zip/node_modules/mini-css-extract-plugin/",\
+          "packageDependencies": [\
+            ["mini-css-extract-plugin", "npm:2.6.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:2.6.0", {\
+          "packageLocation": "./.yarn/__virtual__/mini-css-extract-plugin-virtual-3f20bc7d7d/0/cache/mini-css-extract-plugin-npm-2.6.0-c3e21a6a16-ea73bd6655.zip/node_modules/mini-css-extract-plugin/",\
+          "packageDependencies": [\
+            ["mini-css-extract-plugin", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:2.6.0"],\
+            ["@types/webpack", null],\
+            ["schema-utils", "npm:4.0.0"],\
+            ["webpack", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:5.70.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/webpack",\
+            "webpack"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["minimalistic-assert", [\
         ["npm:1.0.1", {\
           "packageLocation": "./.yarn/cache/minimalistic-assert-npm-1.0.1-dc8bb23d29-cc7974a926.zip/node_modules/minimalistic-assert/",\
@@ -9557,6 +9581,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:7.29.4"],\
             ["eslint-plugin-react-hooks", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:4.3.0"],\
             ["html-webpack-plugin", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:5.5.0"],\
+            ["mini-css-extract-plugin", "virtual:45f919fc58fb400787633586d75af22a61543e16acaa2c5902697e909fc1c8af6ecb8a21813006c3be2120e3cc9b30a476c30df24b36122a7fee5091c28bff16#npm:2.6.0"],\
             ["prettier", "npm:2.6.0"],\
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:17.0.2"],\
