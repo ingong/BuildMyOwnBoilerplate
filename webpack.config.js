@@ -55,6 +55,13 @@ module.exports = {
           alias: {
             '@': path.resolve(__dirname, 'src'),
             '@public': path.resolve(__dirname, 'public'),
+            '@api': path.resolve(__dirname, 'src/api'),
+            '@components': path.resolve(__dirname, 'src/components'),
+            '@constants': path.resolve(__dirname, 'src/constants'),
+            '@helpers': path.resolve(__dirname, 'src/helpers'),
+            '@hooks': path.resolve(__dirname, 'src/hooks'),
+            '@styles': path.resolve(__dirname, 'src/styles'),
+            '@utils': path.resolve(__dirname, 'src/utils'),
           },
         },
       },

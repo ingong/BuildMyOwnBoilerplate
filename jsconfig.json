@@ -1,0 +1,15 @@
+{
+  "exclude": ["./.yarn"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@api": ["./src/api/*"],
+      "@components/*": ["./src/components/*"],
+      "@constants": ["./src/constants/index.js"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@utils": ["./src/utils/index.js"]
+    }
+  }
+}
