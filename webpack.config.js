@@ -40,10 +40,23 @@ module.exports = {
       {
         test: /\.(png|jp(e)g|gif|svg|ico)$/,
         type: 'asset/resource',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10000
+          }
+        }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         type: 'asset',
+      },
+      {
+        resolve: {
+          alias: {
+            '@': path.resolve(__dirname, 'src'),
+            '@public': path.resolve(__dirname, 'public'),
+          },
+        },
       },
     ],
   },
