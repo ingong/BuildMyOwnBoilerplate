@@ -1,34 +1,24 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const loadPlugin = () => {
-  const plugins = [
-    new HtmlWebpackPlugin({
-      title: 'SPA',
-      template: '/public/index.html',
-      minify:
-        process.env.NODE_ENV === 'production'
-          ? {
-              collapseWhitespace: true,
-              removeComments: true,
-            }
-          : false,
-    }),
-  ];
-
-  return plugins;
-};
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: 'development',
   entry: path.resolve(__dirname, './src/index'),
-  resolve: {
-    extensions: ['.js', '.jsx'],
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'bundle.js',
+    clean: true,
   },
   devServer: {
-    historyApiFallback: true,
+    overlay: true,
     open: true,
+    hot: true,
+    historyApiFallback: true,
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
   devtool: process.env.NODE_ENV === 'development' ? 'eval-source-map' : false,
   module: {
@@ -39,12 +29,21 @@ module.exports = {
         exclude: /\.(yarn)$/,
       },
       {
-        test: /\.(png|jp(e)g|gif|svg|ico)$/,
-        type: 'asset/resource',
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          mode === "production"
+            ? MiniCssExtractPlugin.loader
+            : "style-loader", 
+          "css-loader",
+        ]
       },
       {
-        test: /\.(sa|sc|c)ss$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.(png|jp(e)g|gif|svg|ico)$/,
+        type: 'asset/resource',
+        options: {
+          name: "[name].[ext]?[hash]",
+          limit: 10000
+        }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -52,14 +51,33 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      minify:
+        process.env.NODE_ENV === 'production'
+          ? {
+              collapseWhitespace: true,
+              removeComments: true,
+            }
+          : false,
+      hash: mode === 'production'
+    }),
+  ],
   optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
+    minimizer:
+      mode === "production"
+        ? [
+            new TerserPlugin({
+              terserOptions: {
+                compress: {
+                  drop_console: true
+                }
+              }
+            })
+          ]
+        : []
   },
-  output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
-    clean: true,
-  },
-  plugins: loadPlugin(),
+  
+  
 };
