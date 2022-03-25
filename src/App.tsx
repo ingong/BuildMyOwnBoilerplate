@@ -2,11 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from '@emotion/react';
 
 import Router from './Router';
-import { theme, GlobalStyle } from '@styles/index';
-
-// const App = () => {
-//   return <div>Hello World</div>;
-// };
+import { theme, GlobalStyle } from '@/styles/index';
 
 const App = () => {
   return (
@@ -20,5 +16,3 @@ const App = () => {
 };
 
 export default App;
-
-// export default App;
