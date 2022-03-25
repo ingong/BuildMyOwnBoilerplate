@@ -13,7 +13,6 @@
 
     "moduleResolution": "node",
     "allowJs": true, // js 파일들 ts에서 import해서 쓸 수 있는지
-    "checkJs": true, // 일반 js 파일에서도 에러체크 여부
     "jsx": "preserve", // tsx 파일을 jsx로 어떻게 컴파일할 것인지 'preserve', 'react-native', 'react'
     "declaration": true, //컴파일시 .d.ts 파일도 자동으로 함께생성 (현재쓰는 모든 타입이 정의된 파일)
 
