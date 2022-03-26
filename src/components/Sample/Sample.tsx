@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer } from 'react';
+import { useState, useReducer } from 'react';
 import { reducer } from '@/shared/Component.reducer';
 import { getSearchCat } from '@/api/cat';
 import { CatCardType } from '@/shared/type';
