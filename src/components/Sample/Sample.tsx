@@ -1,20 +1,20 @@
-import { useState, useReducer } from 'react';
+import { useState, useEffect, useReducer } from 'react';
 import { reducer } from '@/shared/Component.reducer';
 import { getSearchCat } from '@/api/cat';
 import { CatCardType } from '@/shared/type';
 import styled from '@emotion/styled';
 import IntersectionArea from './IntersectionArea';
-import useModals from '@/components/Modals/useModals';
+import useModals from '@/hooks/useModals';
 import SampleModal from './SampleModal';
 
 const Sample = () => {
-  const [page, setPage] = useState<number>(0);
+  const [page, setPage] = useState<string>('abc');
   const [state, dispatch] = useReducer(reducer<CatCardType[]>(), { _TAG: 'IDLE' });
   const { openModal, closeModal } = useModals();
 
   const handleModalOpen = () => {
     openModal(SampleModal, {
-      onSubmit: () => console.log('hello'),
+      onSubmit: (v) => setPage(v),
       onClose: () => closeModal(SampleModal),
     });
   };
@@ -46,6 +46,7 @@ const Sample = () => {
 
   return (
     <SampleWrapper>
+      <div>{page}</div>
       <button onClick={handleModalOpen}>on/off darkMode</button>
       {(() => {
         switch (state._TAG) {

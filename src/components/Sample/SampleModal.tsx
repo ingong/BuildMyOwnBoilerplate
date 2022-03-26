@@ -6,12 +6,15 @@ import { ModalPropType } from '@/components/Modals/modal.type';
 const SampleModal = (props?: ModalPropType) => {
   const root = document.getElementById('root') ?? document.body;
   const { onSubmit, onClose } = props as ModalPropType;
-  // console.log(onSubmit, onClose);
+  const handleSubmitBtn = async () => {
+    await onSubmit('onSubmitResult');
+  };
   const ModalContent = (
     <Styled.Container>
       <Styled.Body>
         <Styled.Title size="SMALL">Title 입니다</Styled.Title>
-        <Styled.Content>내용내용내용내용내용내용내용내용내용내용내용내용내용내용</Styled.Content>
+        <Styled.Content>내용</Styled.Content>
+        <button onClick={handleSubmitBtn}>버튼버튼</button>
       </Styled.Body>
       <Styled.Overlay onClick={onClose} />
     </Styled.Container>

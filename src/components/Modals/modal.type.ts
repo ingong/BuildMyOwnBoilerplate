@@ -1,10 +1,9 @@
 import { ReactPortal } from 'react';
 
-type onSubmitType = (value: any) => Promise<void>;
-type dummyType = () => void;
+type onSubmitType = (value: any) => Promise<void> | void;
 
 export type ModalPropType = {
-  onSubmit: onSubmitType | dummyType;
+  onSubmit: onSubmitType;
   onClose: () => void;
   restProps?: {};
 };

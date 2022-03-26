@@ -1,6 +1,6 @@
 import { ReactPortal, useContext } from 'react';
 import { ModalsDispatchContext } from '@/contexts/ModalsContext';
-import { ModalPropType } from './modal.type';
+import { ModalPropType } from '../components/Modals/modal.type';
 
 const useModals = () => {
   const { open, close } = useContext(ModalsDispatchContext);
