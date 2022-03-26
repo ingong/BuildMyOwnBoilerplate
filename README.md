@@ -13,11 +13,8 @@
 ### 요약
 
 위 기술 스택 기반으로 구성한 프로젝트 보일러플레이트입니다.
-
 Yarn berry의 Zero-Installs 방법을 사용했습니다. VSCode환경 기준으로 작성했습니다.
-
 관련해서 VSCode Extension인 zipfs 설치와 VSCode의 TypeScript 버전 선택이 필요합니다.
-
 방법은 아래에 간단하게 작성했습니다.
 
 1. zipfs 설치
