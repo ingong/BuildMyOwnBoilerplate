@@ -3,14 +3,19 @@ import { ThemeProvider } from '@emotion/react';
 
 import Router from './Router';
 import { theme, GlobalStyle } from '@/styles/index';
+import Modals from '@/components/Modals';
+import { ModalsProvider } from '@/contexts/ModalsContext';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Router />
-      </ThemeProvider>
+      <ModalsProvider>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Modals />
+          <Router />
+        </ThemeProvider>
+      </ModalsProvider>
     </BrowserRouter>
   );
 };

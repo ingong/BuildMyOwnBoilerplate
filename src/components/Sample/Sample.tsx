@@ -4,10 +4,20 @@ import { getSearchCat } from '@/api/cat';
 import { CatCardType } from '@/shared/type';
 import styled from '@emotion/styled';
 import IntersectionArea from './IntersectionArea';
+import useModals from '@/components/Modals/useModals';
+import SampleModal from './SampleModal';
 
 const Sample = () => {
   const [page, setPage] = useState<number>(0);
   const [state, dispatch] = useReducer(reducer<CatCardType[]>(), { _TAG: 'IDLE' });
+  const { openModal, closeModal } = useModals();
+
+  const handleModalOpen = () => {
+    openModal(SampleModal, {
+      onSubmit: () => console.log('hello'),
+      onClose: () => closeModal(SampleModal),
+    });
+  };
 
   const handleClick = async () => {
     dispatch({
@@ -15,7 +25,6 @@ const Sample = () => {
     });
 
     const response = await getSearchCat();
-    console.log(response.data);
     if (response?.isError) {
       return dispatch({
         _TAG: 'FAILED',
@@ -36,15 +45,8 @@ const Sample = () => {
   };
 
   return (
-    <SampleWrapper onClick={handleClick}>
-      <button
-        onClick={(e) => {
-          darkonOff();
-          e.stopPropagation();
-        }}
-      >
-        on/off darkMode
-      </button>
+    <SampleWrapper>
+      <button onClick={handleModalOpen}>on/off darkMode</button>
       {(() => {
         switch (state._TAG) {
           case 'IDLE':
@@ -54,7 +56,7 @@ const Sample = () => {
           case 'ERROR':
             return 'ERROR';
           case 'OK':
-            return state.payload.map((v) => <DivWrapper key={v.id}>{v.title}</DivWrapper>);
+            return state.payload?.map((v) => <DivWrapper key={v.id}>{v.title}</DivWrapper>);
         }
       })()}
       <IntersectionArea />
