@@ -1,2 +1,2 @@
-import Sample from './Sample';
-export { Sample };
+export * from './Sample';
+export { default } from './Sample';

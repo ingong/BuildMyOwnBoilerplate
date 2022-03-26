@@ -1,2 +1,2 @@
-import Form from './Form';
-export { Form };
+export * from './Form';
+export { default } from './Form';

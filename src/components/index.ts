@@ -1,4 +1,4 @@
-import { Sample } from './Sample';
-import { Form } from './Form';
+import Sample from './Sample';
+import Form from './Form';
 
 export { Form, Sample };
