@@ -1,10 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
-import Test from '@/components/Test';
+import { Sample, Form } from '@/components';
+import ABC from '@/components/ABC/ABC';
 
 const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<Test />} />
+      <Route path="/" element={<Sample />} />
+      <Route path="/form" element={<Form />} />
+      <Route path="/abc" element={<ABC />} />
     </Routes>
   );
 };

@@ -6,7 +6,7 @@ const Modals = () => {
   const { close } = useContext(ModalsDispatchContext);
   return openedModals.map((modal, index) => {
     const { Component, props } = modal;
-    const { onSubmit, ...restProps } = props;
+    const { onSubmit, restProps } = props;
     const onClose = () => {
       close(Component);
     };
