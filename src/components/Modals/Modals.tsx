@@ -1,12 +1,13 @@
 import { useContext } from 'react';
-import { ModalListState, ModalsStateContext } from '@/contexts/ModalsContext';
+import { ModalsStateContext } from '@/contexts/ModalsContext';
+import { ModalListStateType } from '@/components/Modals/modal.type';
 
 const Modals = () => {
-  const openedModals = useContext(ModalsStateContext) as ModalListState;
-  // const { close } = useContext(ModalsDispatchContext) as ModalsDispatch;
+  const openedModals = useContext(ModalsStateContext) as ModalListStateType;
+
   return (
     <>
-      {openedModals.map((modal, index) => {
+      {openedModals?.map((modal, index) => {
         const { Component, props } = modal;
         const { onSubmit, onClose, ...restProps } = props;
 
