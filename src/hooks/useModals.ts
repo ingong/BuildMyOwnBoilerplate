@@ -7,12 +7,12 @@ const useModals = () => {
   const preventScroll = () => (document.body.style.overflow = 'hidden');
   const ableScroll = () => (document.body.style.overflow = 'scroll');
 
-  const openModal = (Component: () => ReactPortal, props: ModalPropType) => {
+  const openModal = (Component: () => ReactPortal | JSX.Element, props: ModalPropType) => {
     open(Component, props);
     preventScroll();
   };
 
-  const closeModal = (Component: () => ReactPortal) => {
+  const closeModal = (Component: () => ReactPortal | JSX.Element) => {
     close(Component);
     ableScroll();
   };

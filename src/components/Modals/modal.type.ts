@@ -9,13 +9,13 @@ export type ModalPropType = {
 };
 
 export type ModalType = {
-  Component: (props?: ModalPropType) => ReactPortal;
+  Component: (props?: ModalPropType) => ReactPortal | JSX.Element;
   props: ModalPropType;
 };
 
 export type ModalListStateType = Array<ModalType>;
 
 export type ModalsDispatchType = {
-  open: (Component: () => ReactPortal, props: ModalPropType) => void;
-  close: (Component: () => ReactPortal) => void;
+  open: (Component: () => ReactPortal | JSX.Element, props: ModalPropType) => void;
+  close: (Component: () => ReactPortal | JSX.Element) => void;
 };
