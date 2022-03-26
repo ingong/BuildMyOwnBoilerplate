@@ -70,5 +70,5 @@
       }
     }
   ],
-  "ignorePatterns": ["build/", ".pnp.cjs", ".yarn/"]
+  "ignorePatterns": ["build/", ".pnp.cjs", ".yarn/", "jest.config.js"]
 }
