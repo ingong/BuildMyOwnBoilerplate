@@ -5,32 +5,46 @@
     "es2021": true,
     "jest": true
   },
-  "parserOptions": {
-    "parser": "babel-eslint",
-    "sourceType": "module",
-    "allowImportExportEverywhere": true,
-    "ecmaVersion": 2015
-  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended"
   ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "allowImportExportEverywhere": true,
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
     "prettier/prettier": "error",
-    "no-undef": "off",
     "no-unused-vars": "warn",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off"
   },
-  "ignorePatterns": ["build/", ".pnp.cjs", ".yarn/"],
   "overrides": [
     {
       "files": "**/*.+(ts|tsx).",
+      "plugins": ["@typescript-eslint"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:prettier/recommended"
+      ],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "project": "./tsconfig.eslint.json",
+        "allowImportExportEverywhere": true,
         "ecmaVersion": 13,
         "sourceType": "module",
         "ecmaFeatures": {
@@ -41,23 +55,13 @@
         "react": {
           "version": "detect"
         },
-        "import/extensions": [".ts", ".tsx"],
+        "import/extensions": [".ts", ".tsx", ".js", ".jsx"],
         "import/parsers": {
-          "@typescript-eslint/parser": [".ts", ".tsx"]
+          "@typescript-eslint/parser": [".ts", ".tsx", ".jsx", "js"]
         }
       },
-      "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:react/recommended",
-        "plugin:react-hooks/recommended",
-        "plugin:prettier/recommended"
-      ],
       "rules": {
         "prettier/prettier": "error",
-        "no-undef": "off",
         "no-unused-vars": "warn",
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
@@ -65,5 +69,6 @@
         "@typescript-eslint/no-unsafe-assignment": "off"
       }
     }
-  ]
+  ],
+  "ignorePatterns": ["build/", ".pnp.cjs", ".yarn/"]
 }
