@@ -9,6 +9,12 @@ const style = css`
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: 62.5%;
   }
+  :root {
+    --primary-color: yellow;
+  }
+  .ui-dark {
+    --primary-color: blue;
+  }
   * {
     box-sizing: border-box;
     padding: 0;
