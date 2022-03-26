@@ -6,7 +6,7 @@ export interface CatRespType {
 
 export interface CatCardType {
   breeds: [];
-  height: number;
+  title: string;
   width: number;
   id: string;
   url: string;
