@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "webpack-dev-server --progress",
     "build": "NODE_ENV=production webpack --progress",
-    "start": "serve build",
+    "start": "serve -s build",
     "unit:test": "jest",
     "lint": "eslint --ext ts,tsx ."
   },

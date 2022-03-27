@@ -5,9 +5,10 @@ import ABC from '@/components/ABC/ABC';
 const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<Sample />} />
-      <Route path="/form" element={<Form />} />
+      <Route path="/" element={<Form />} />
+      <Route path="/sample" element={<Sample />} />
       <Route path="/abc" element={<ABC />} />
+      <Route path="/*" element={<Form />} />
     </Routes>
   );
 };
